@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-import "./Chart.css";
 
 interface Case {
   date: string;
@@ -9,7 +8,7 @@ interface Case {
   recovered: number;
 }
 
-const Chart = () => {
+const Chart: React.FunctionComponent = () => {
   const [cases, setCases] = useState<{
     [key: string]: Case[];
   } | null>(null);
@@ -56,7 +55,7 @@ const Chart = () => {
       cases["United Kingdom"].map(
         v => v.confirmed / cases["United Kingdom"].slice(-1)[0].confirmed
       ),
-      "US",
+      "UK",
       "rgba(192,75,75,1)"
     ),
     getAttr(
@@ -115,11 +114,7 @@ const Chart = () => {
       ...v
     }))
   };
-  return (
-    <div className="Container">
-      <Line data={data} width={600} height={450} />
-    </div>
-  );
+  return <Line data={data} width={600} height={450} />;
 };
 
 const getAttr = (data: any, label: string, palette: string) => ({
