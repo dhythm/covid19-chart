@@ -11,7 +11,7 @@ interface Case {
 const Chart: React.FunctionComponent = () => {
   const [cases, setCases] = useState<{
     [key: string]: Case[];
-  } | null>(null);
+  }>(null);
   useEffect(() => {
     fetch("https://pomber.github.io/covid19/timeseries.json")
       .then(response => response.json())
@@ -21,7 +21,6 @@ const Chart: React.FunctionComponent = () => {
   if (!cases) {
     return <></>;
   }
-  console.log({ ...cases });
 
   const shownCases = [
     getAttr(

@@ -17,6 +17,7 @@
     "react-dom": "^16.13.1",
     "react-map-gl": "^5.2.3",
     "react-scripts": "3.4.1",
+    "topojson-client": "^3.1.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
