@@ -1,9 +1,9 @@
-import React from "react";
-import "./App.css";
-import Chart from "./Chart";
-import Map from "./Map";
+import React from 'react';
+import './App.css';
+import Chart from './Chart';
+import Map from './Map';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -13,19 +13,19 @@ function App() {
       </header>
       <div
         style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           minHeight: 450,
           maxWidth: 600,
-          left: "calc(50% - 300px)"
+          left: 'calc(50% - 300px)',
         }}
       >
         <Map />
       </div>
     </div>
   );
-}
+};
 
 export default App;
