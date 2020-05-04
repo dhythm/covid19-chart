@@ -3,7 +3,7 @@ import './App.css';
 import Chart from './Chart';
 import Map from './Map';
 
-const App = () => {
+const App: React.FunctionComponent = () => {
   return (
     <div className="App">
       <header className="App-header">
