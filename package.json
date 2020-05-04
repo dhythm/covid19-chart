@@ -42,6 +42,25 @@
     ]
   },
   "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
     "reactotron-react-js": "^3.3.7"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx|json|css)": [
+      "prettier --write"
+    ]
   }
 }
